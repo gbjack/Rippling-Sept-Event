@@ -84,7 +84,7 @@
             </header>
     </section>
 
-    <div id="eventInfo" class="bg-berry-300 lg:sticky lg:top-0 lg:z-50">
+    <div id="eventInfo" class="bg-berry-300 sticky top-0 z-50">
             <div class="w-full max-w-360 mx-auto p-5">
                 <div class="flex flex-col gap-y-4 lg:flex lg:flex-row lg:w-full lg:justify-between lg:gap-x-0 lg:gap-y-0">
                     
@@ -177,6 +177,7 @@
                 </div>
             </div>
         </div>
+    </section>
 
     <section class="bg-sand">
         <div class="w-full max-w-360 mx-auto px-5 py-27 lg:py-54">
@@ -360,17 +361,63 @@
 
     <section class="bg-[url(../images/img-formbg-1440x1024.jpg)] bg-center bg-cover bg-no-repeat" loading="lazy" decoding="async">
         <div class="w-full max-w-360 mx-auto px-5 py-27 lg:py-54" id="formId">            
-            <div class="w-full md:w-140 max-w-180">
-                <h2 class="text-berry-100 font-bold text-[clamp(2rem,1.2676rem+3.125vw,4.0625rem)] mb-12 leading-tight" data-usal="fade-u">
-                    Thank you <span class="text-sand"><br>for registering!</span>
-                </h2>
-                <p class="font-basel text-white text-lg md:text-xl lg:text-2xl leading-normal mb-4 md:mb-6 lg:mb-8">
-                    We've sent a confirmation email with the event details and a calendar invite to your inbox, please keep an eye out for it.
-                </p>
-                <p class="font-basel text-white text-lg md:text-xl lg:text-2xl leading-normal">
-                    We look forward to seeing you there!
-                </p>
+            <h2 class="text-berry-100 font-bold text-[clamp(2rem,1.2676rem+3.125vw,4.0625rem)] mb-12 leading-tight" data-usal="fade-u">
+                Register to take part <span class="text-sand"><br>in this roundtable event.</span>
+            </h2>
+            
+            <div style="width: 100%; max-width: 46rem;">
+                <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description="
+                method="post" data-id="191722FC90141D02184CB1B62AB3DC266B90ABA854308A5363E2B0650F5896A3D9FB270C3CCD4070B1EEB5C6ECE4B9D477FDF7017D029D62B396ECF587E754BD">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6" data-usal="fade-u delay-200">
+                        <div>
+                            <label for="fieldName" class="text-white font-basel font-medium text-[1.1138rem]">
+                                First Name<!-- --><span class="text-berry-100">*</span>
+                            </label>
+                            <input id="fieldName" maxlength="200" name="cm-name" placeholder="" required="" class="w-full px-4 py-2 mt-2 rounded bg-white focus:outline-none focus:ring-2 focus:ring-berry-100 focus:border-b-berry-100 transition-all text-black font-basel text-[1.1138rem]">
+                        </div>
+                        <div>
+                            <label for="fieldtdpktu" class="text-white font-basel font-medium text-[1.1138rem]">
+                                Last Name<!-- --><span class="text-berry-100">*</span>
+                            </label>
+                            <input id="fieldtdpktu" maxlength="200" name="cm-f-tdpktu" required="" class="w-full px-4 py-2 mt-2 rounded bg-white focus:outline-none focus:ring-2 focus:ring-berry-100 focus:border-b-berry-100 transition-all text-black font-basel text-[1.1138rem]">
+                        </div>
+                        <div>
+                            <label for="fieldEmail" class="text-white font-basel font-medium text-[1.1138rem]">
+                                Email<!-- --><span class="text-berry-100">*</span>
+                            </label>
+                            <input autocomplete="Email" class="js-cm-email-input qa-input-email w-full px-4 py-2 rounded mt-2 bg-white text-black font-basel text-[1.1138rem]  focus:outline-none focus:ring-2 focus:ring-berry-100 focus:border-b-berry-100 transition-all" id="fieldEmail" maxlength="200" name="cm-tdldhtd-tdldhtd" placeholder="" required="" type="email">
+                        </div>
+                        <div>
+                            <label for="fieldtdpktd" class="text-white font-basel font-medium text-[1.1138rem]">
+                                Phone<!-- --><span class="text-berry-100">*</span>
+                            </label>
+                            <input id="fieldtdpktd" maxlength="200" name="cm-f-tdpktd" required="" type="number" class="w-full px-4 py-2 mt-2 rounded bg-white focus:outline-none focus:ring-2 focus:ring-berry-100 focus:border-b-berry-100 transition-all text-black font-basel text-[1.1138rem] no-spinner">
+                        </div>
+                        <div class="md:col-span-2 mt-2">
+                            <label for="fieldtdpkth" class="text-white font-basel font-medium text-[1.1138rem]">
+                                Dietary Requirements<!-- --><span class="text-berry-100">*</span>
+                            </label>
+                            <input id="fieldtdpkth" maxlength="200" name="cm-f-tdpkth" required="" placeholder="e.g., Vegetarian, Vegan, Gluten-free, No restrictions, etc." class="w-full px-4 py-2 mt-2 rounded bg-white focus:outline-none focus:ring-2 focus:ring-berry-100 focus:border-b-berry-100 transition-all text-black font-basel text-[1.1138rem]">
+                        </div>
+                
+                        <div class="md:col-span-2 mt-2 flex gap-2">
+                            <input aria-required="false" id="cm-privacy-email" name="cm-privacy-email" type="checkbox" class="h-5 w-5 mt-0.5 shrink-0 appearance-none rounded border border-gray-300 bg-white checked:bg-black checked:border-berry-100 focus:ring-2 focus:ring-berry-100 focus:outline-none transition-all cursor-pointer relative checked:after:content-['✓'] checked:after:absolute checked:after:text-white checked:after:text-xs checked:after:font-bold checked:after:top-1/2 checked:after:left-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2">
+                            <label for="cm-privacy-email" class="text-white font-basel font-normal text-base align-top">
+                                By checking this box, you agree to be contacted via phone and email regarding your interest in our products and services. We will treat your data in accordance with our privacy policy.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex flex-col gap-4" data-usal="fade-u delay-400">
+                        <button type="submit" class="w-max inline-block px-8 py-3 bg-berry-100 text-black !font-basel font-bold! text-[1.1138rem]! rounded hover:bg-transparent border border-berry-100 transition-colors duration-500 hover:text-berry-100 cursor-pointer">
+                            Register Now
+                        </button>
+                        <div class="text-sm font-basel pt-3">
+                            <span class="text-berry-100 font-bold">*</span> <span class="text-white opacity-80">Mandatory</span>
+                        </div>
+                    </div>
+                </form>
             </div>
+            <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
         </div>
     </section>
 
@@ -419,29 +466,6 @@
         prevEl: ".swiper-button-prev"
     }
     });
-    </script>
-
-    <script>
-        // Keep the event infobar visible on the first screen (it sits at the bottom of
-        // the hero) and let it stick to the top of the viewport while scrolling.
-        function fitHero() {
-            var hero = document.getElementById('hero');
-            var info = document.getElementById('eventInfo');
-            if (!hero || !info) return;
-            hero.style.minHeight = 'calc(100svh - ' + info.offsetHeight + 'px)';
-        }
-        window.addEventListener('resize', fitHero);
-        window.addEventListener('load', fitHero);
-        fitHero();
-
-        // Re-fit whenever the infobar's height changes (font load, breakpoints, content).
-        if ('ResizeObserver' in window) {
-            var eventInfo = document.getElementById('eventInfo');
-            if (eventInfo) new ResizeObserver(fitHero).observe(eventInfo);
-        }
-        if (document.fonts && document.fonts.ready) {
-            document.fonts.ready.then(fitHero);
-        }
     </script>
 
 </body>

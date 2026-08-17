@@ -39,9 +39,8 @@
 </head>
 
 <body>
-    <section class="grid grid-rows-[1fr_auto] min-h-svh">
-        <div class="bg-[url('../images/img-1628x970.webp')] bg-top bg-cover bg-no-repeat min-h-0 flex flex-col" loading="eager" decoding="async" fetchpriority="high">
-            <header class="w-full max-w-360 mx-auto px-5 pt-14 pb-0 flex flex-col h-full">
+    <section id="hero" class="bg-[url('../images/img-1628x970.webp')] bg-top bg-cover bg-no-repeat flex flex-col" loading="eager" decoding="async" fetchpriority="high">
+        <header class="w-full max-w-360 mx-auto px-5 pt-14 pb-0 flex flex-col flex-1">
                 <a href="https://www.rippling.com/" target="_blank" class="flex-shrink-0" aria-label="Rippling logo">
                     <svg xmlns="http://www.w3.org/2000/svg" width="208" height="29" viewBox="0 0 208 29" fill="none">
                         <g clip-path="url(#clip0_23_190)">
@@ -83,9 +82,9 @@
                     </a>
                 </div>
             </header>
-        </div>
+    </section>
 
-        <div class="bg-berry-300">
+    <div id="eventInfo" class="bg-berry-300 lg:sticky lg:top-0 lg:z-50">
             <div class="w-full max-w-360 mx-auto p-5">
                 <div class="flex flex-col gap-y-4 lg:flex lg:flex-row lg:w-full lg:justify-between lg:gap-x-0 lg:gap-y-0">
                     
@@ -178,7 +177,6 @@
                 </div>
             </div>
         </div>
-    </section>
 
     <section class="bg-sand">
         <div class="w-full max-w-360 mx-auto px-5 py-27 lg:py-54">
@@ -467,6 +465,29 @@
         prevEl: ".swiper-button-prev"
     }
     });
+    </script>
+
+    <script>
+        // Keep the event infobar visible on the first screen (it sits at the bottom of
+        // the hero) and let it stick to the top of the viewport while scrolling.
+        function fitHero() {
+            var hero = document.getElementById('hero');
+            var info = document.getElementById('eventInfo');
+            if (!hero || !info) return;
+            hero.style.minHeight = 'calc(100svh - ' + info.offsetHeight + 'px)';
+        }
+        window.addEventListener('resize', fitHero);
+        window.addEventListener('load', fitHero);
+        fitHero();
+
+        // Re-fit whenever the infobar's height changes (font load, breakpoints, content).
+        if ('ResizeObserver' in window) {
+            var eventInfo = document.getElementById('eventInfo');
+            if (eventInfo) new ResizeObserver(fitHero).observe(eventInfo);
+        }
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(fitHero);
+        }
     </script>
 
 </body>
